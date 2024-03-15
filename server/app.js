@@ -14,8 +14,10 @@ app.use(cors({
 
 
 const user = require('./routes/userRoutes')
+const charity = require('./routes/charityRoutes')
 
-app.use("/api/",user)
+app.use("/business/",user)
+app.use("/charity/",charity)
 
 app.get("/",(req,res)=>{
     res.json("I am working")
