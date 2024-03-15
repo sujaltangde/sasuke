@@ -14,10 +14,12 @@ app.use(
 );
 
 const user = require("./routes/userRoutes");
-app.use("/business/", user);
+app.use("/api/", user);
 
 app.get("/", (req, res) => {
   res.json("I am working");
 });
 
 module.exports = app;
+
+
