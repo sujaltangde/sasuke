@@ -1,45 +1,41 @@
-const mongoose = require('mongoose')
-const validator = require('validator')
+const mongoose = require('mongoose');
 
 const surplusOrder = new mongoose.Schema({
-    name: {
+    orgName: {
         type: String,
-        required: [true, "Please enter your name"]
+        required: [true, "Please enter organization name"]
     },
-    
-    email: {
+    description: {
         type: String,
-        required: true,
-        validate: [validator.isEmail, "Please Enter valid email address"],
-        unique: true
+        required: [true, "Please enter description"]
     },
-
-    password: {
-        type: String,
-        required: [true, "Please enter a password"]
-    },
-    
-    address: {
-        type: String,
-        required: true,
-    },
-
-    number: {
+    foodQuantityAsPerson: {
         type: Number,
-        required:true,
-        unique: true
+        required: [true, "Please enter food quantity per person"]
     },
-
-    role: {
-        type:String ,
-        required:true,
+    cookingTime: {
+        type: Date,
+        required: [true, "Please enter cooking time"]
     },
-
+    imgFood: {
+        type: String 
+    },
+    addressPickup: {
+        type: String,
+        required: [true, "Please enter pickup address"]
+    },
+    eatByTime: {
+        type: Date,
+        required: true,
+        default: function() {
+            return new Date(this.cookingTime.getTime() + 15 * 60 * 60 * 1000);
+        }
+    },
     createdAt: {
         type: Date,
         default: Date.now
     }
-})
+});
 
-const User = mongoose.model('surplus', surplusOrder)
-module.exports = User
+const Surplus = mongoose.model('surplus', surplusOrder);
+module.exports = Surplus;

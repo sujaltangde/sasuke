@@ -14,7 +14,10 @@ app.use(
 );
 
 const user = require("./routes/userRoutes");
+const surplus = require("./routes/surplusRoutes");
+
 app.use("/api/", user);
+app.use("/surplus/", surplus);
 
 app.get("/", (req, res) => {
   res.json("I am working");
