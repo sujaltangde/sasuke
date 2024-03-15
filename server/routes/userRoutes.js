@@ -10,4 +10,6 @@ router.route("/isLogin").get(isAuthenticated, isLogin) ;
 router.route("/getLogUser").get(isAuthenticated, getLogUser) ; 
 
 
+
+
 module.exports = router
