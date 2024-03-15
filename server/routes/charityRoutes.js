@@ -11,3 +11,5 @@ router.route("/getLogUser").get(isAuthenticated, getLogUser) ;
 
 
 module.exports = router
+
+// updated all the stuff
