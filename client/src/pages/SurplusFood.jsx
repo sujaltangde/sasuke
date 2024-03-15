@@ -45,8 +45,8 @@ export const SurplusFood = () => {
         </div>
 
 
-        <div>
-            <button className='text-white bg-green-600 px-12 py-12  text-xl font-bold'>Add </button>
+        <div className='fixed right-12 bottom-12'>
+            <button className='text-white rounded-full bg-green-600 px-6 py-6  text-xl font-bold'>Add </button>
         </div>
       </div>
     </>
