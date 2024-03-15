@@ -33,7 +33,6 @@ function App() {
 
     if (data.isLogin) {
       setIsLogin(true);
-      navigate("/");
     } else {
       navigate("/register");
     }

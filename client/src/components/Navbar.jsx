@@ -7,7 +7,7 @@ import axios from "axios";
 export const Navbar = ({logOrNot}) => {
   const [toggle, setToggle] = useState(logOrNot);
 
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(logOrNot);
 
   const navigate = useNavigate();
 
@@ -27,8 +27,8 @@ export const Navbar = ({logOrNot}) => {
 
     if (data.isLogin) {
       setIsLogin(true);
-      navigate("/");
     } else {
+      setIsLogin(false)
       navigate("/register");
     }
   };
@@ -39,9 +39,11 @@ export const Navbar = ({logOrNot}) => {
 
   const logOut = () => {
     localStorage.removeItem("accessToken");
-    getIsLogin()
     navigate("/register")
+    setIsLogin(false)
+
     toast.success("Logout Successful!");
+    getIsLogin()
   };
 
   return (
@@ -94,9 +96,10 @@ export const Navbar = ({logOrNot}) => {
             ) : (
               <button
                 onClick={() => logOut()}
-                className="bg-blue-800 px-4  text-sm py-0 "
+                className="flex justify-center items-center  text-sm text-center p"
               >
-                Logout
+                
+                <span className="bg-green-500 px-7 rounded-xl py-1">Logout</span>
               </button>
             )}
           </div>

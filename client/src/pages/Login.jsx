@@ -91,7 +91,7 @@ export const Login = () => {
             <div className="w-full">
               <button
                 type="submit"
-                className={` bg-blue-800 flex justify-center items-center hover:bg-blue-900 text-white w-full py-2`}
+                className={`bg-green-500 flex justify-center items-center font-semibold hover:bg-green-500 text-white w-full py-2`}
               >
                 Login
               </button>
@@ -99,7 +99,7 @@ export const Login = () => {
             <div>
               <p className=" text-center">
                 Don't have an account{" "}
-                <Link to="/register" className="underline text-blue-700">
+                <Link to="/register" className="underline text-green-700">
                   register
                 </Link>{" "}
                 here

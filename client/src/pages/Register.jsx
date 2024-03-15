@@ -175,7 +175,7 @@ export const Register = () => {
             <div className="w-full">
               <button
                 type="submit"
-                className={` bg-blue-800 flex justify-center items-center hover:bg-blue-900 text-white w-full py-2`}
+                className={` bg-green-500 flex justify-center items-center font-semibold hover:bg-green-500 text-white w-full py-2`}
               >
                 Register
               </button>
@@ -183,7 +183,7 @@ export const Register = () => {
             <div>
               <p className=" text-center">
                 Already have a account{" "}
-                <Link to="/login" className="underline text-blue-700">
+                <Link to="/login" className="underline text-green-700">
                   login
                 </Link>{" "}
                 here

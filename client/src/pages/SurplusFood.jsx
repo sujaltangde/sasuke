@@ -35,9 +35,9 @@ export const SurplusFood = () => {
                   <img src={item.imgFood} alt={item.orgName} className="rounded-lg mb-2" style={{ maxHeight: '200px' }} />
                   <h2 className="text-lg font-semibold mb-2">{item.orgName}</h2>
                   <p>{item.description}</p>
-                  <p className="mt-2 text-sm text-gray-500">Available Thalis: {item.foodQuantityAsPerson}</p>
-                  <p className="text-sm text-gray-500">Pickup Address: {item.addressPickup}</p>
-                  <p className="text-sm text-gray-500">Cooking Time: {new Date(item.cookingTime).toLocaleString()}</p>
+                  <p className="mt-2 my-1 text-sm text-gray-700">Available Thalis: {item.foodQuantityAsPerson}</p>
+                  <p className="text-sm my-1 text-gray-700">Pickup Address: {item.addressPickup}</p>
+                  <p className="text-sm my-1 text-gray-700">Cooking Time: {new Date(item.cookingTime).toLocaleString()}</p>
                 </div>
               ))}
             </div>
@@ -46,7 +46,7 @@ export const SurplusFood = () => {
 
 
         <div className='fixed right-12 bottom-12'>
-            <button className='text-white rounded-full bg-green-600 px-6 py-6  text-xl font-bold'>Add </button>
+            <button className='text-white rounded-full bg-green-600 w-16 shadow-md shadow-gray-500 h-16  text-lg font-bold'>Add </button>
         </div>
       </div>
     </>
