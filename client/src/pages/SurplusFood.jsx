@@ -73,10 +73,10 @@ export const SurplusFood = () => {
           )}
         </div>
 
-{/* 
-        <div className='w-[70vw] h-[50vh] bg-white'> 
+
+      {modal &&  <div className='w-[70vw] top-44 left-60  shadow-md shadow-gray-500 h-[50vh] fixed bg-white'> 
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, accusamus veniam. Ab minima ullam sapiente, omnis distinctio soluta explicabo rem odit quod molestias vero delectus fugiat nam rerum quis maxime!
-        </div> */}
+        </div>}
 
 
        {user && user.role === "business" && <div className='fixed right-12 bottom-12'>
