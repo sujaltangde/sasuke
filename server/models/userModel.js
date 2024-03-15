@@ -7,6 +7,11 @@ const userSchema = new mongoose.Schema({
         required: [true, "Please enter your name"]
     },
 
+    businessName : {
+        type: String,
+        required: [true, "Please enter your business name"]
+    },
+    
     email: {
         type: String,
         required: true,
@@ -17,6 +22,22 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [true, "Please enter a password"]
+    },
+    
+    address: {
+        type: String,
+        required: true,
+    },
+
+    number: {
+        type: Number,
+        required:true,
+        unique: true
+    },
+
+    role: {
+        type:String ,
+        required:true,
     },
 
     createdAt: {
