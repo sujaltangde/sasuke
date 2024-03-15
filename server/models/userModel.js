@@ -7,9 +7,9 @@ const userSchema = new mongoose.Schema({
         required: [true, "Please enter your name"]
     },
 
-    businessName : {
+    orgName : {
         type: String,
-        required: [true, "Please enter your business name"]
+        required: [false, "Please enter  your organization name"]
     },
     
     email: {

@@ -5,13 +5,13 @@ const {createToken} = require('../middlewares/auth')
 exports.register = async (req,res) =>{
     try{
 
-        const { name, businessName, email, password, address, number, role} = req.body ;
+        const { name, orgName, email, password, address, number, role} = req.body ;
 
         const hashPass = await bcrypt.hash(password,10) ;
         
         const user = await User.create({
             name,
-            businessName,
+            orgName,
             email,
             password: hashPass,
             address,

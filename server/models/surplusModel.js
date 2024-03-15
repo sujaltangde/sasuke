@@ -1,15 +1,10 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
-const userSchema = new mongoose.Schema({
+const surplusOrder = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "Please enter your name"]
-    },
-
-    charityName : {
-        type: String,
-        required: [true, "Please enter your business name"]
     },
     
     email: {
@@ -46,5 +41,5 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const User = mongoose.model('charity', userSchema)
+const User = mongoose.model('surplus', surplusOrder)
 module.exports = User

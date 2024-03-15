@@ -14,12 +14,7 @@ app.use(
 );
 
 const user = require("./routes/userRoutes");
-const charity = require("./routes/charityRoutes");
-const individual = require("./routes/individualRoutes");
-
 app.use("/business/", user);
-app.use("/charity/", charity);
-app.use("/individual/", individual);
 
 app.get("/", (req, res) => {
   res.json("I am working");
